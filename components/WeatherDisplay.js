@@ -16,7 +16,7 @@ function getTimeFromDate(dateString) {
 }
 
 const WeatherDisplay = ({ location, current }) => (
-  <View style={tw`flex justify-around flex-1 mb-2`}>
+  <View style={tw`pt-4 flex justify-around flex-1 mb-2`}>
     <Text style={tw`text-white text-center text-2xl font-bold`}>
       {location?.name}, 
       <Text style={tw`text-lg font-semibold text-gray-300`}>
@@ -26,7 +26,7 @@ const WeatherDisplay = ({ location, current }) => (
     <View style={tw`flex-row justify-center`}>
       <Image source={{ uri: 'https:' + current?.condition?.icon }} style={tw`w-52 h-52`} />
     </View>
-    <View style={tw`space-y-2`}> 
+    <View style={tw`pb-4 space-y-2`}> 
       <Text style={tw`text-center text-6xl text-white ml-5`}>
         {current?.temp_c} &#176;
       </Text>
@@ -44,7 +44,7 @@ const WeatherDisplay = ({ location, current }) => (
         <Text style={tw`text-white font-semibold text-base`}>{` ${current.humidity}%`}</Text>
       </View>
       <View style={tw`flex-row space-x-2 items-center`}>
-        <Image source={require("../assets/icons/time.png")} style={tw`h-6 w-6`} />
+        <Image source={require("../assets/icons/timeicon.png")} style={tw`h-6 w-6`} />
         <Text style={tw`text-white font-semibold text-base`}>{ getTimeFromDate(location.localtime) }</Text>
       </View>
     </View>          
