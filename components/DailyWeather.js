@@ -30,6 +30,7 @@ const DailyWeather = ({ forecast }) => {
               source={{ uri: `https:${item.day.condition.icon}` }}
               style={styles.icon}
             />
+            <Text style={tw`w-20 text-white`}>{item.day.condition.text}</Text>
             <Text style={tw`text-white`}>{item.day.avgtemp_c}°C</Text>
           </View>
         )}
