@@ -5,8 +5,7 @@ import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import tw from 'twrnc';
 
 const Header = ({ showSearch, toggleSearch, handleSearch }) => (
-  <View style={tw`mx-4 relative z-50`}>
-    <View style={tw`flex-row items-center h-12 bg-neutral-300 rounded-full mt-11 flex justify-between items-center`}>
+  <View style={tw`flex-row items-center h-12 bg-neutral-300 rounded-full mt-11 flex justify-between items-center`}>
       {showSearch && (
         <TextInput 
           onChangeText={handleSearch}
@@ -21,7 +20,6 @@ const Header = ({ showSearch, toggleSearch, handleSearch }) => (
         <MagnifyingGlassIcon size="25" color="black" />
       </TouchableOpacity>
     </View>
-  </View>
 );
 
 export default Header;

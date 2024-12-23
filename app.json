@@ -13,7 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Se necesita acceso a tu ubicación para mostrar el clima de tu área.",
+        "NSLocationAlwaysUsageDescription": "Se necesita acceso a tu ubicación para proporcionar actualizaciones continuas del clima."
+      }
     },
     "android": {
       "adaptiveIcon": {
